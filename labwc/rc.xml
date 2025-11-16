@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<labwc_config>
+  <windowRules>
+	  <windowRule identifier="*" serverDecoration="no" />
+  </windowRules>
+  <keyboard>
+    <default/>
+    <keybind key="Super_L" onRelease="yes">
+      <action name="Execute" command="qs -c noctalia-shell ipc call launcher toggle"/>
+    </keybind>
+    <keybind key="W-R">
+      <action name="Execute" command="labwc -r"/>
+    </keybind>
+    <keybind key="W-Escape">
+      <action name="Execute" command="qs -c noctalia-shell ipc call sessionMenu toggle"/>
+    </keybind>
+    <keybind key="C-A-Backspace">
+      <action name="Execute" command="labwc -e"/>
+    </keybind>
+    <keybind key="W-L" action="SendToDesktop right"/>
+  </keyboard>
+  <windowSwitcher preview="no" outlines="no" allWorkspaces="yes">
+    <osd show="yes" style="thumbnail" output="all"/>
+  </windowSwitcher>
+  <desktops number="4"/>
+</labwc_config>

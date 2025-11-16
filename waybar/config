@@ -1,0 +1,74 @@
+{
+  "height": 25,
+  "spacing": 4,
+  "layer": "top",
+  "position": "top",
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "network", "pulseaudio", "custom/power"],
+  "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "month-mode-col": 3,
+                    "weeks-pos"     : "left",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_down",
+                    "on-scroll-down": "tz_up",
+                    "on-scroll-up": "shift_down",
+                    "on-scroll-down": "shift_up"
+                    }
+    },  "cpu": {
+    "format": "{usage}% ",
+  },
+  "memory": {
+    "format": "{used}GiB "
+  },
+  "network": {
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "",
+        "tooltip-format": "{ifname}",
+        "format-disconnected": "⚠",
+  },
+  "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+    "format" : "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "shutdown",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate",
+        },
+},
+
+}
+

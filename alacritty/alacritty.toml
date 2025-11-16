@@ -1,5 +1,5 @@
 [general]
-   import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+    import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 
 [env]
    TERM = "xterm-256color"
@@ -9,3 +9,6 @@
 
 [terminal]
    shell = {program = "/usr/bin/zellij"}
+
+[font]
+   size = 13.0
